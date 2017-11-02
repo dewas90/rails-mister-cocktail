@@ -1,0 +1,14 @@
+<h2><%= @cocktail.name %></h2>
+<p> with the following ingredients:</p>
+<ul>
+  <% @cocktail.ingredients.each do |ingredient|%>
+    <li>
+    <%= ingredient.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a dose to this recipe', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+
+<%= link_to 'Back to homepage', cocktails_path, class: 'btn btn-warning' %>
+
