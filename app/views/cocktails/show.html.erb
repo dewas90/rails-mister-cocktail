@@ -4,9 +4,10 @@
   </h1>
   <p>has the following ingredients:</p>
   <ul>
-    <% @cocktail.ingredients.each do |ingredient|%>
+    <% @cocktail.doses.each do |dose|%>
       <li>
-      <%= ingredient.name %>
+      <%= dose.ingredient.name %>
+      <%= dose.description %>
       </li>
     <% end %>
   </ul>

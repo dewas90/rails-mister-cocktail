@@ -10,7 +10,18 @@ puts 'Cleaning database...'
 Ingredient.destroy_all
 
 puts 'Creating Ingredients...'
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Orange")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Mint leaves")
+Ingredient.create(name: "Amaretto")
+Ingredient.create(name: "Wiskey")
+Ingredient.create(name: "Vodka")
+Ingredient.create(name: "Rhum")
+Ingredient.create(name: "Banana")
+Ingredient.create(name: "Vermouth")
+Ingredient.create(name: "Porto")
+Ingredient.create(name: "Tequila")
+Ingredient.create(name: "Gin")
+
 puts 'Finished!'
