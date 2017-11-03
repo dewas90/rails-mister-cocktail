@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 
 module RailsMisterCocktail
   class Application < Rails::Application
+config.serve_static_assets = true
 
     config.generators do |generate|
       generate.assets false
