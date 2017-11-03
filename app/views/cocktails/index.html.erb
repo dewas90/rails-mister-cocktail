@@ -1,22 +1,27 @@
-<h1>
-  Welcome to your awesome cocktail app
-</h1>
 
-<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+<%= render 'shared/banner' %>
 
-<h2>
-  List of currently existing cocktails
-</h2>
+<div class="container" id="main_container">
+  <div class="row">
+    <h1>
+      Featured cocktails
+    </h1>
 
-<ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
   <% @cocktails.each do |cocktail| %>
-    <div class="container">
-      <div class="row">
-        <li>
-          <p><%= cocktail.name %></p>
-        <%= link_to 'Show cocktail', cocktail_path(cocktail), class: 'btn btn-warning' %>
-        </li>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-description">
+          <h2><%= cocktail.name %></h2>
+        </div>
       </div>
+      <% end %>
     </div>
   <% end %>
-</ul>
+  </div>
+</div>
